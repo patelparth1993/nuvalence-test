@@ -1,0 +1,11 @@
+<mat-toolbar >
+  <mat-toolbar-row>
+    <span>All Users</span>    
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-selection-list #users [multiple]="false" (selectionChange)="onUserSelect($event)" style="padding:0px">
+    <mat-list-option *ngFor="let user of allUsers" [value]="user" class="user-list">
+      {{user.name.title}} {{user.name.first}} {{user.name.last}}
+      <mat-divider></mat-divider>
+    </mat-list-option>
+</mat-selection-list>

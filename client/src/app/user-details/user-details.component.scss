@@ -1,0 +1,19 @@
+@import "../../globals";
+.user-card{
+    text-align: center;
+    margin:auto;
+    @media #{$media-tablet}{
+        width: 70%;
+    }
+    @media #{$media-desktop}{
+        width: 50%;
+    }
+
+}
+
+#userMenu{
+    &:hover{
+        cursor: pointer;
+        color: #{$primary-color};
+    }
+}
